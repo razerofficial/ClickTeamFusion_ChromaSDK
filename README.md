@@ -26,6 +26,10 @@
 
 ![image_4](images/image_4.png)
 
+* Import the `ChromaSDK` object to global events to make the functions available
+
+![image_5](images/image_5.png)
+
 ## Compiling Extension
 
 * Add the ClickTeam Fusion SDK to the extension Visual Studio C++ `Additional Include Directories`
