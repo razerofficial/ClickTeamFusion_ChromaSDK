@@ -12,8 +12,21 @@
 
 ![image_2](images/image_2.png)
 
+### Extension Setup
 
-## Project Setup
+* Copy `ClickTeamFusion_ChromaSDK.mfx` to ```C:\Program Files (x86)\Clickteam Fusion 2.5\Extensions\Unicode```
+
+* Restart ClickTeam Fusion
+
+* Extension manager should show the `ChromaSDK`
+
+![image_3](images/image_3.png)
+
+* Create New Object should show the `ChromaSDK` as an available object type
+
+![image_4](images/image_4.png)
+
+## Compiling Extension
 
 * Add the ClickTeam Fusion SDK to the extension Visual Studio C++ `Additional Include Directories`
 
@@ -27,6 +40,6 @@
 
 ```C:\Public\Fusion25SDK\Lib```
 
-* Add `mmfs2.lib` to the extension Visual Studio Linker `Additional Dependencies`
+* Add the ClickTeam Fusion SDK to the extension Visual Studio Linker `Additional Dependencies`
 
 ```mmfs2.lib```

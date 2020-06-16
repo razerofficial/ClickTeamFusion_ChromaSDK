@@ -213,7 +213,7 @@ END
 STRINGTABLE DISCARDABLE 
 BEGIN
     KPX_MARK                "MF2"
-    KPX_NAME                "My New Extension"
+    KPX_NAME                "ChromaSDK"
 END
 
 STRINGTABLE DISCARDABLE 
@@ -242,11 +242,11 @@ END
 
 STRINGTABLE DISCARDABLE 
 BEGIN
-    IDST_OBJNAME            "My New Extension"
-    IDST_AUTHOR             "The extension's author"
-    IDST_COPYRIGHT          "Copyright © 2005 Extension Author"
-    IDST_COMMENT            "Quick description displayed in the Insert Object dialog box and in the object's About properties."
-    IDST_HTTP               "http://www.authorswebpage.com"
+    IDST_OBJNAME            "ChromaSDK"
+    IDST_AUTHOR             "Tim Graupmann"
+    IDST_COPYRIGHT          "Copyright © 2020 Razer US Ltd."
+    IDST_COMMENT            "Control Chroma RGB from MMF2."
+    IDST_HTTP               "http://razer.com"
 END
 
 #endif    // English (U.S.) resources
