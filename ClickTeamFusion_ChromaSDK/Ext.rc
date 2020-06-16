@@ -245,7 +245,7 @@ BEGIN
     IDST_OBJNAME            "ChromaSDK"
     IDST_AUTHOR             "Tim Graupmann"
     IDST_COPYRIGHT          "Copyright © 2020 Razer US Ltd."
-    IDST_COMMENT            "Control Chroma RGB from MMF2."
+    IDST_COMMENT            "Control Chroma RGB from CF2.5"
     IDST_HTTP               "http://razer.com"
 END
 

@@ -18,6 +18,8 @@
 
 * Restart ClickTeam Fusion
 
+* Open Extension Manager and click `Refresh`
+
 * Extension manager should show the `ChromaSDK`
 
 ![image_3](images/image_3.png)
