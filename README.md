@@ -11,3 +11,22 @@
 * Install `Lua` script support
 
 ![image_2](images/image_2.png)
+
+
+## Project Setup
+
+* Add the ClickTeam Fusion SDK to the extension Visual Studio C++ `Additional Include Directories`
+
+```%(AdditionalIncludeDirectories);C:\Public\Fusion25SDK\Inc```
+
+* Add the ClickTeam Fusion SDK to the extension Visual Studio Resource `Additional Include Directories`
+
+```%(AdditionalIncludeDirectories);C:\Public\Fusion25SDK\Inc```
+
+* Add the ClickTeam Fusion SDK to the extension Visual Studio Linker `Additional Library Directories`
+
+```C:\Public\Fusion25SDK\Lib```
+
+* Add `mmfs2.lib` to the extension Visual Studio Linker `Additional Dependencies`
+
+```mmfs2.lib```
