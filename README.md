@@ -23,3 +23,7 @@
 * Import the `ChromaSDK` object to global events to make the functions available
 
 ![image_5](images/image_5.png)
+
+## Support
+
+Contact `Tim Graupmann#0611` on Discord for extension support.
