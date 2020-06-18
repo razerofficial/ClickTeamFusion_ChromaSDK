@@ -6,7 +6,7 @@
 
 * WIP: [MMF2Exts/DarkEdif/ChromaSDK](https://github.com/tgraupmann/MMF2Exts/tree/master/DarkEdif/ChromaSDK)
 
-* Copy `ChromaSDK.mfx` to ```C:\Program Files (x86)\Clickteam Fusion 2.5\Extensions\Unicode```
+* Copy [ChromaSDK.mfx](https://github.com/tgraupmann/ClickTeamFusion_ChromaSDK/releases) to ```C:\Program Files (x86)\Clickteam Fusion 2.5\Extensions\Unicode```
 
 * Restart ClickTeam Fusion
 
