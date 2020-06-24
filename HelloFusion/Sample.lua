@@ -1,5 +1,4 @@
 function ShowEffect1()
-	ChromaAnimationAPI.UseIdleAnimation(EChromaSDKDeviceEnum.DE_Keyboard, false)
 	-- start with a blank animation
 	 baseLayer = "Animations/Sprite1_Keyboard.chroma";
 	-- close the blank animation if it's already loaded, discarding any changes
