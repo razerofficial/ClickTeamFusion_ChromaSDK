@@ -637,6 +637,144 @@ function ShowEffect8Keypad()
 	-- play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 end
+function ShowEffect9()
+	-- start with a blank animation
+	 baseLayer = "Animations/Blank_Keyboard.chroma";
+	-- close the blank animation if it's already loaded, discarding any changes
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	-- open the blank animation, passing a reference to the base animation when loading has completed
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	-- the length of the animation
+	frameCount = 50;
+	-- set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
+	--integer number of times to blink during animation
+	speed = 2;
+	-- loop over all frames in the layer
+	for frameId=0,frameCount,1 do
+		--Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+		t = 1 - math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
+		-- multiply the frame by the 't' intensity
+		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
+	end
+	-- play the animation on the dynamic canvas
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect9ChromaLink()
+	-- start with a blank animation
+	 baseLayer = "Animations/Blank_ChromaLink.chroma";
+	-- close the blank animation if it's already loaded, discarding any changes
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	-- open the blank animation, passing a reference to the base animation when loading has completed
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	-- the length of the animation
+	frameCount = 50;
+	-- set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
+	--integer number of times to blink during animation
+	speed = 2;
+	-- loop over all frames in the layer
+	for frameId=0,frameCount,1 do
+		--Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+		t = 1 - math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
+		-- multiply the frame by the 't' intensity
+		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
+	end
+	-- play the animation on the dynamic canvas
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect9Headset()
+	-- start with a blank animation
+	 baseLayer = "Animations/Blank_Headset.chroma";
+	-- close the blank animation if it's already loaded, discarding any changes
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	-- open the blank animation, passing a reference to the base animation when loading has completed
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	-- the length of the animation
+	frameCount = 50;
+	-- set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
+	--integer number of times to blink during animation
+	speed = 2;
+	-- loop over all frames in the layer
+	for frameId=0,frameCount,1 do
+		--Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+		t = 1 - math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
+		-- multiply the frame by the 't' intensity
+		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
+	end
+	-- play the animation on the dynamic canvas
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect9Mousepad()
+	-- start with a blank animation
+	 baseLayer = "Animations/Blank_Mousepad.chroma";
+	-- close the blank animation if it's already loaded, discarding any changes
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	-- open the blank animation, passing a reference to the base animation when loading has completed
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	-- the length of the animation
+	frameCount = 50;
+	-- set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
+	--integer number of times to blink during animation
+	speed = 2;
+	-- loop over all frames in the layer
+	for frameId=0,frameCount,1 do
+		--Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+		t = 1 - math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
+		-- multiply the frame by the 't' intensity
+		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
+	end
+	-- play the animation on the dynamic canvas
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect9Mouse()
+	-- start with a blank animation
+	 baseLayer = "Animations/Blank_Mouse.chroma";
+	-- close the blank animation if it's already loaded, discarding any changes
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	-- open the blank animation, passing a reference to the base animation when loading has completed
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	-- the length of the animation
+	frameCount = 50;
+	-- set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
+	--integer number of times to blink during animation
+	speed = 2;
+	-- loop over all frames in the layer
+	for frameId=0,frameCount,1 do
+		--Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+		t = 1 - math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
+		-- multiply the frame by the 't' intensity
+		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
+	end
+	-- play the animation on the dynamic canvas
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect9Keypad()
+	-- start with a blank animation
+	 baseLayer = "Animations/Blank_Keypad.chroma";
+	-- close the blank animation if it's already loaded, discarding any changes
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	-- open the blank animation, passing a reference to the base animation when loading has completed
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	-- the length of the animation
+	frameCount = 50;
+	-- set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
+	--integer number of times to blink during animation
+	speed = 2;
+	-- loop over all frames in the layer
+	for frameId=0,frameCount,1 do
+		--Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+		t = 1 - math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
+		-- multiply the frame by the 't' intensity
+		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
+	end
+	-- play the animation on the dynamic canvas
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
 
 function ExecuteEffect(index)
 	if index == 1 then
