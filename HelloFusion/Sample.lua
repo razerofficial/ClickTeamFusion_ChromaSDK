@@ -3699,6 +3699,113 @@ function ShowEffect41Keypad()
 	-- play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 end
+function ShowEffect42()
+	-- start with a blank animation
+	 baseLayer = "Animations/Blank_Keyboard.chroma"
+	-- close the blank animation if it's already loaded, discarding any changes
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	-- open the blank animation, passing a reference to the base animation when loading has completed
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	-- the length of the animation
+	frameCount = 1
+	-- set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 0, 64)
+	maxRow = ChromaAnimationAPI.GetMaxRow(EChromaSDKDevice2DEnum.DE_Keyboard)
+	maxColumn = ChromaAnimationAPI.GetMaxColumn(EChromaSDKDevice2DEnum.DE_Keyboard)
+	-- pick first key
+	pointAColumn = math.floor(math.random() * maxColumn) % 22
+	pointARow = math.floor(math.random() * maxRow) % 6
+	-- pick a different second key
+	repeat
+		pointBColumn = math.floor(math.random() * maxColumn) % 22
+		pointBRow = math.floor(math.random() * maxRow) % 6
+	until not (pointAColumn == pointBColumn and pointARow == pointBRow)
+	color = ChromaAnimationAPI.GetRGB(0, 255, 0)
+	frameIndex = 0
+	for i=0.0,1.0,0.04 do -- 1.0/22.0
+		r = math.floor(ChromaAnimationAPI.Lerp(pointARow, pointBRow, i))
+		c = math.floor(ChromaAnimationAPI.Lerp(pointAColumn, pointBColumn, i))
+		if (r >= 0 and r < maxRow and
+			c >= 0 and c < maxColumn) then
+			key = bit.bor((bit.lshift(r,8)),c)
+			ChromaAnimationAPI.SetKeyColorName(baseLayer, frameIndex, key, color)
+		end
+	end
+	-- play at top speed
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	-- play the animation on the dynamic canvas
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect42ChromaLink()
+	-- start with a blank animation
+	 baseLayer = "Animations/Blank_ChromaLink.chroma"
+	-- close the blank animation if it's already loaded, discarding any changes
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	-- open the blank animation, passing a reference to the base animation when loading has completed
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	-- the length of the animation
+	frameCount = 50
+	-- solid color
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
+	-- play the animation on the dynamic canvas
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect42Headset()
+	-- start with a blank animation
+	 baseLayer = "Animations/Blank_Headset.chroma"
+	-- close the blank animation if it's already loaded, discarding any changes
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	-- open the blank animation, passing a reference to the base animation when loading has completed
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	-- the length of the animation
+	frameCount = 50
+	-- solid color
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
+	-- play the animation on the dynamic canvas
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect42Mousepad()
+	-- start with a blank animation
+	 baseLayer = "Animations/Blank_Mousepad.chroma"
+	-- close the blank animation if it's already loaded, discarding any changes
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	-- open the blank animation, passing a reference to the base animation when loading has completed
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	-- the length of the animation
+	frameCount = 50
+	-- solid color
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
+	-- play the animation on the dynamic canvas
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect42Mouse()
+	-- start with a blank animation
+	 baseLayer = "Animations/Blank_Mouse.chroma"
+	-- close the blank animation if it's already loaded, discarding any changes
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	-- open the blank animation, passing a reference to the base animation when loading has completed
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	-- the length of the animation
+	frameCount = 50
+	-- solid color
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
+	-- play the animation on the dynamic canvas
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect42Keypad()
+	-- start with a blank animation
+	 baseLayer = "Animations/Blank_Keypad.chroma"
+	-- close the blank animation if it's already loaded, discarding any changes
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	-- open the blank animation, passing a reference to the base animation when loading has completed
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	-- the length of the animation
+	frameCount = 50
+	-- solid color
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
+	-- play the animation on the dynamic canvas
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
 
 function ExecuteEffect(buttonName)
 	if buttonName == "Button 1" then
@@ -4023,11 +4130,11 @@ function ExecuteEffect(buttonName)
 	end
 	if buttonName == "Button 41" then
 		ShowEffect41()
-		--ShowEffect41ChromaLink()
-		--ShowEffect41Headset()
-		--ShowEffect41Keypad()
-		--ShowEffect41Mouse()
-		--ShowEffect41Mousepad()
+		ShowEffect41ChromaLink()
+		ShowEffect41Headset()
+		ShowEffect41Keypad()
+		ShowEffect41Mouse()
+		ShowEffect41Mousepad()
 	end
 	if buttonName == "Button 42" then
 		ShowEffect42()
