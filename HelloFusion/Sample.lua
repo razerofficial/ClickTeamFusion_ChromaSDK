@@ -776,8 +776,9 @@ function ShowEffect9Keypad()
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 end
 
-function ExecuteEffect(index)
-	if index == 1 then
+function ExecuteEffect(buttonName)
+  DebugPrint(buttonName);
+	if buttonName == "Button 1" then
 		ShowEffect1()
 		ShowEffect1ChromaLink()
 		ShowEffect1Headset()
@@ -785,7 +786,7 @@ function ExecuteEffect(index)
 		ShowEffect1Mouse()
 		ShowEffect1Mousepad()
 	end
-	if index == 2 then
+	if buttonName == "Button 2" then
 		ShowEffect2()
 		ShowEffect2ChromaLink()
 		ShowEffect2Headset()
@@ -793,7 +794,7 @@ function ExecuteEffect(index)
 		ShowEffect2Mouse()
 		ShowEffect2Mousepad()
 	end
-	if index == 3 then
+	if buttonName == "Button 3" then
 		ShowEffect3()
 		ShowEffect3ChromaLink()
 		ShowEffect3Headset()
@@ -801,7 +802,7 @@ function ExecuteEffect(index)
 		ShowEffect3Mouse()
 		ShowEffect3Mousepad()
 	end
-	if index == 4 then
+	if buttonName == "Button 4" then
 		ShowEffect4()
 		ShowEffect4ChromaLink()
 		ShowEffect4Headset()
@@ -809,7 +810,7 @@ function ExecuteEffect(index)
 		ShowEffect4Mouse()
 		ShowEffect4Mousepad()
 	end
-	if index == 5 then
+	if buttonName == "Button 5" then
 		ShowEffect5()
 		ShowEffect5ChromaLink()
 		ShowEffect5Headset()
@@ -817,7 +818,7 @@ function ExecuteEffect(index)
 		ShowEffect5Mouse()
 		ShowEffect5Mousepad()
 	end
-	if index == 6 then
+	if buttonName == "Button 6" then
 		ShowEffect6()
 		ShowEffect6ChromaLink()
 		ShowEffect6Headset()
@@ -825,7 +826,7 @@ function ExecuteEffect(index)
 		ShowEffect6Mouse()
 		ShowEffect6Mousepad()
 	end
-	if index == 7 then
+	if buttonName == "Button 7" then
 		ShowEffect7()
 		ShowEffect7ChromaLink()
 		ShowEffect7Headset()
@@ -833,7 +834,7 @@ function ExecuteEffect(index)
 		ShowEffect7Mouse()
 		ShowEffect7Mousepad()
 	end
-	if index == 8 then
+	if buttonName == "Button 8" then
 		ShowEffect8()
 		ShowEffect8ChromaLink()
 		ShowEffect8Headset()
@@ -841,7 +842,7 @@ function ExecuteEffect(index)
 		ShowEffect8Mouse()
 		ShowEffect8Mousepad()
 	end
-	if index == 9 then
+	if buttonName == "Button 9" then
 		ShowEffect9()
 		ShowEffect9ChromaLink()
 		ShowEffect9Headset()
@@ -849,7 +850,7 @@ function ExecuteEffect(index)
 		ShowEffect9Mouse()
 		ShowEffect9Mousepad()
 	end
-	if index == 10 then
+	if buttonName == "Button 10" then
 		ShowEffect10()
 		ShowEffect10ChromaLink()
 		ShowEffect10Headset()
@@ -857,7 +858,7 @@ function ExecuteEffect(index)
 		ShowEffect10Mouse()
 		ShowEffect10Mousepad()
 	end
-	if index == 11 then
+	if buttonName == "Button 11" then
 		ShowEffect11()
 		ShowEffect11ChromaLink()
 		ShowEffect11Headset()
@@ -865,7 +866,7 @@ function ExecuteEffect(index)
 		ShowEffect11Mouse()
 		ShowEffect11Mousepad()
 	end
-	if index == 12 then
+	if buttonName == "Button 12" then
 		ShowEffect12()
 		ShowEffect12ChromaLink()
 		ShowEffect12Headset()
@@ -873,7 +874,7 @@ function ExecuteEffect(index)
 		ShowEffect12Mouse()
 		ShowEffect12Mousepad()
 	end
-	if index == 13 then
+	if buttonName == "Button 13" then
 		ShowEffect13()
 		ShowEffect13ChromaLink()
 		ShowEffect13Headset()
@@ -881,7 +882,7 @@ function ExecuteEffect(index)
 		ShowEffect13Mouse()
 		ShowEffect13Mousepad()
 	end
-	if index == 14 then
+	if buttonName == "Button 14" then
 		ShowEffect14()
 		ShowEffect14ChromaLink()
 		ShowEffect14Headset()
@@ -889,7 +890,7 @@ function ExecuteEffect(index)
 		ShowEffect14Mouse()
 		ShowEffect14Mousepad()
 	end
-	if index == 15 then
+	if buttonName == "Button 15" then
 		ShowEffect15()
 		ShowEffect15ChromaLink()
 		ShowEffect15Headset()
@@ -897,7 +898,7 @@ function ExecuteEffect(index)
 		ShowEffect15Mouse()
 		ShowEffect15Mousepad()
 	end
-	if index == 16 then
+	if buttonName == "Button 16" then
 		ShowEffect16()
 		ShowEffect16ChromaLink()
 		ShowEffect16Headset()
@@ -905,7 +906,7 @@ function ExecuteEffect(index)
 		ShowEffect16Mouse()
 		ShowEffect16Mousepad()
 	end
-	if index == 17 then
+	if buttonName == "Button 17" then
 		ShowEffect17()
 		ShowEffect17ChromaLink()
 		ShowEffect17Headset()
@@ -913,7 +914,7 @@ function ExecuteEffect(index)
 		ShowEffect17Mouse()
 		ShowEffect17Mousepad()
 	end
-	if index == 18 then
+	if buttonName == "Button 18" then
 		ShowEffect18()
 		ShowEffect18ChromaLink()
 		ShowEffect18Headset()
@@ -921,7 +922,7 @@ function ExecuteEffect(index)
 		ShowEffect18Mouse()
 		ShowEffect18Mousepad()
 	end
-	if index == 19 then
+	if buttonName == "Button 19" then
 		ShowEffect19()
 		ShowEffect19ChromaLink()
 		ShowEffect19Headset()
@@ -929,7 +930,7 @@ function ExecuteEffect(index)
 		ShowEffect19Mouse()
 		ShowEffect19Mousepad()
 	end
-	if index == 20 then
+	if buttonName == "Button 20" then
 		ShowEffect20()
 		ShowEffect20ChromaLink()
 		ShowEffect20Headset()
@@ -937,7 +938,7 @@ function ExecuteEffect(index)
 		ShowEffect20Mouse()
 		ShowEffect20Mousepad()
 	end
-	if index == 21 then
+	if buttonName == "Button 21" then
 		ShowEffect21()
 		ShowEffect21ChromaLink()
 		ShowEffect21Headset()
@@ -945,7 +946,7 @@ function ExecuteEffect(index)
 		ShowEffect21Mouse()
 		ShowEffect21Mousepad()
 	end
-	if index == 22 then
+	if buttonName == "Button 22" then
 		ShowEffect22()
 		ShowEffect22ChromaLink()
 		ShowEffect22Headset()
@@ -953,7 +954,7 @@ function ExecuteEffect(index)
 		ShowEffect22Mouse()
 		ShowEffect22Mousepad()
 	end
-	if index == 23 then
+	if buttonName == "Button 23" then
 		ShowEffect23()
 		ShowEffect23ChromaLink()
 		ShowEffect23Headset()
@@ -961,7 +962,7 @@ function ExecuteEffect(index)
 		ShowEffect23Mouse()
 		ShowEffect23Mousepad()
 	end
-	if index == 24 then
+	if buttonName == "Button 24" then
 		ShowEffect24()
 		ShowEffect24ChromaLink()
 		ShowEffect24Headset()
@@ -969,7 +970,7 @@ function ExecuteEffect(index)
 		ShowEffect24Mouse()
 		ShowEffect24Mousepad()
 	end
-	if index == 25 then
+	if buttonName == "Button 25" then
 		ShowEffect25()
 		ShowEffect25ChromaLink()
 		ShowEffect25Headset()
@@ -977,7 +978,7 @@ function ExecuteEffect(index)
 		ShowEffect25Mouse()
 		ShowEffect25Mousepad()
 	end
-	if index == 26 then
+	if buttonName == "Button 26" then
 		ShowEffect26()
 		ShowEffect26ChromaLink()
 		ShowEffect26Headset()
@@ -985,7 +986,7 @@ function ExecuteEffect(index)
 		ShowEffect26Mouse()
 		ShowEffect26Mousepad()
 	end
-	if index == 27 then
+	if buttonName == "Button 27" then
 		ShowEffect27()
 		ShowEffect27ChromaLink()
 		ShowEffect27Headset()
@@ -993,7 +994,7 @@ function ExecuteEffect(index)
 		ShowEffect27Mouse()
 		ShowEffect27Mousepad()
 	end
-	if index == 28 then
+	if buttonName == "Button 28" then
 		ShowEffect28()
 		ShowEffect28ChromaLink()
 		ShowEffect28Headset()
@@ -1001,7 +1002,7 @@ function ExecuteEffect(index)
 		ShowEffect28Mouse()
 		ShowEffect28Mousepad()
 	end
-	if index == 29 then
+	if buttonName == "Button 29" then
 		ShowEffect29()
 		ShowEffect29ChromaLink()
 		ShowEffect29Headset()
@@ -1009,7 +1010,7 @@ function ExecuteEffect(index)
 		ShowEffect29Mouse()
 		ShowEffect29Mousepad()
 	end
-	if index == 30 then
+	if buttonName == "Button 30" then
 		ShowEffect30()
 		ShowEffect30ChromaLink()
 		ShowEffect30Headset()
@@ -1017,7 +1018,7 @@ function ExecuteEffect(index)
 		ShowEffect30Mouse()
 		ShowEffect30Mousepad()
 	end
-	if index == 31 then
+	if buttonName == "Button 31" then
 		ShowEffect31()
 		ShowEffect31ChromaLink()
 		ShowEffect31Headset()
@@ -1025,7 +1026,7 @@ function ExecuteEffect(index)
 		ShowEffect31Mouse()
 		ShowEffect31Mousepad()
 	end
-	if index == 32 then
+	if buttonName == "Button 32" then
 		ShowEffect32()
 		ShowEffect32ChromaLink()
 		ShowEffect32Headset()
@@ -1033,7 +1034,7 @@ function ExecuteEffect(index)
 		ShowEffect32Mouse()
 		ShowEffect32Mousepad()
 	end
-	if index == 33 then
+	if buttonName == "Button 33" then
 		ShowEffect33()
 		ShowEffect33ChromaLink()
 		ShowEffect33Headset()
@@ -1041,7 +1042,7 @@ function ExecuteEffect(index)
 		ShowEffect33Mouse()
 		ShowEffect33Mousepad()
 	end
-	if index == 34 then
+	if buttonName == "Button 34" then
 		ShowEffect34()
 		ShowEffect34ChromaLink()
 		ShowEffect34Headset()
@@ -1049,7 +1050,7 @@ function ExecuteEffect(index)
 		ShowEffect34Mouse()
 		ShowEffect34Mousepad()
 	end
-	if index == 35 then
+	if buttonName == "Button 35" then
 		ShowEffect35()
 		ShowEffect35ChromaLink()
 		ShowEffect35Headset()
@@ -1057,7 +1058,7 @@ function ExecuteEffect(index)
 		ShowEffect35Mouse()
 		ShowEffect35Mousepad()
 	end
-	if index == 36 then
+	if buttonName == "Button 36" then
 		ShowEffect36()
 		ShowEffect36ChromaLink()
 		ShowEffect36Headset()
@@ -1065,7 +1066,7 @@ function ExecuteEffect(index)
 		ShowEffect36Mouse()
 		ShowEffect36Mousepad()
 	end
-	if index == 37 then
+	if buttonName == "Button 37" then
 		ShowEffect37()
 		ShowEffect37ChromaLink()
 		ShowEffect37Headset()
@@ -1073,7 +1074,7 @@ function ExecuteEffect(index)
 		ShowEffect37Mouse()
 		ShowEffect37Mousepad()
 	end
-	if index == 38 then
+	if buttonName == "Button 38" then
 		ShowEffect38()
 		ShowEffect38ChromaLink()
 		ShowEffect38Headset()
@@ -1081,7 +1082,7 @@ function ExecuteEffect(index)
 		ShowEffect38Mouse()
 		ShowEffect38Mousepad()
 	end
-	if index == 39 then
+	if buttonName == "Button 39" then
 		ShowEffect39()
 		ShowEffect39ChromaLink()
 		ShowEffect39Headset()
@@ -1089,7 +1090,7 @@ function ExecuteEffect(index)
 		ShowEffect39Mouse()
 		ShowEffect39Mousepad()
 	end
-	if index == 40 then
+	if buttonName == "Button 40" then
 		ShowEffect40()
 		ShowEffect40ChromaLink()
 		ShowEffect40Headset()
@@ -1097,7 +1098,7 @@ function ExecuteEffect(index)
 		ShowEffect40Mouse()
 		ShowEffect40Mousepad()
 	end
-	if index == 41 then
+	if buttonName == "Button 41" then
 		ShowEffect41()
 		ShowEffect41ChromaLink()
 		ShowEffect41Headset()
@@ -1105,7 +1106,7 @@ function ExecuteEffect(index)
 		ShowEffect41Mouse()
 		ShowEffect41Mousepad()
 	end
-	if index == 42 then
+	if buttonName == "Button 42" then
 		ShowEffect42()
 		ShowEffect42ChromaLink()
 		ShowEffect42Headset()
@@ -1113,7 +1114,7 @@ function ExecuteEffect(index)
 		ShowEffect42Mouse()
 		ShowEffect42Mousepad()
 	end
-	if index == 43 then
+	if buttonName == "Button 43" then
 		ShowEffect43()
 		ShowEffect43ChromaLink()
 		ShowEffect43Headset()
@@ -1121,7 +1122,7 @@ function ExecuteEffect(index)
 		ShowEffect43Mouse()
 		ShowEffect43Mousepad()
 	end
-	if index == 44 then
+	if buttonName == "Button 44" then
 		ShowEffect44()
 		ShowEffect44ChromaLink()
 		ShowEffect44Headset()
@@ -1129,7 +1130,7 @@ function ExecuteEffect(index)
 		ShowEffect44Mouse()
 		ShowEffect44Mousepad()
 	end
-	if index == 45 then
+	if buttonName == "Button 45" then
 		ShowEffect45()
 		ShowEffect45ChromaLink()
 		ShowEffect45Headset()
@@ -1137,7 +1138,7 @@ function ExecuteEffect(index)
 		ShowEffect45Mouse()
 		ShowEffect45Mousepad()
 	end
-	if index == 46 then
+	if buttonName == "Button 46" then
 		ShowEffect46()
 		ShowEffect46ChromaLink()
 		ShowEffect46Headset()
