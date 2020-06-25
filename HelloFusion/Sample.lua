@@ -4023,11 +4023,11 @@ function ExecuteEffect(buttonName)
 	end
 	if buttonName == "Button 41" then
 		ShowEffect41()
-		ShowEffect41ChromaLink()
-		ShowEffect41Headset()
-		ShowEffect41Keypad()
-		ShowEffect41Mouse()
-		ShowEffect41Mousepad()
+		--ShowEffect41ChromaLink()
+		--ShowEffect41Headset()
+		--ShowEffect41Keypad()
+		--ShowEffect41Mouse()
+		--ShowEffect41Mousepad()
 	end
 	if buttonName == "Button 42" then
 		ShowEffect42()
