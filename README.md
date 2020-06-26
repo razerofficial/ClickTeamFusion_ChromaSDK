@@ -52,7 +52,17 @@ The `HelloFusion` project is a `ClickTeam Fusion 2.5 Standard` sample app that s
 
 **Screenshot:**
 
+The sample has visual scripted sample effects and numerous buttons with behaviors that play effects defined by the `Lua` [SampleScript.lua](HelloFusion/Sample.lua).
+
 ![image_6](images/image_6.png)
+
+* Buttons pass their object name to lua via the `Lua Load String` action.
+
+```
+"ExecuteEffect(""" + OName$( "Button 1" ) + """)"
+```
+
+* The first button is cloned to a 10x5 grid which also clones the behaviors. The button text is set dynamically with the object name.
 
 ### Quick Start
 
