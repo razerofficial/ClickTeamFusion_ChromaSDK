@@ -8,6 +8,7 @@
 * [About](#about)
 * [Quick Start](#quick-start)
 * [Project Setup](#project-setup)
+* [Actions](#actions)
 * [Building the Chroma SDK Extension from Source](#building-the-chroma-sdk-extension-from-source)
 
 <a name="see-also"></a>
@@ -107,6 +108,68 @@ The Chroma SDK Extension provides a `ChromaSDK` object with `actions`, `conditio
 * The `PlayComposite` action will play all the animations for the device set. This includes ChromaLink, Headset, Keyboard, Keypad, Mouse, and Mousepad device animations.
 
 ![image_9](images/image_9.png)
+
+### Actions
+
+**Setup**
+
+* `Initialize Extension` - Initialize the `ChromaSDK` if available. Always check the condition `Is Extension Initialized` before calling other methods. This will make sure the user has `Chroma`.
+
+**Lua**
+
+* `Register ChromaSDK with Lua` - Expose the `ChromaSDK` methods to `Lua` script.
+
+* `Lua Load String` - Execute a `Lua` string. This makes it possible to invoke `Lua` functions.
+
+* `Lua Load File` - Load a `Lua` file and execute the script. Use this to define functions that can be called with `Lua Load String`.
+
+**Colors**
+
+* `Set Device to RGB` - Set a device to a single `RGB` color.
+
+* `Set All Devices to RGB` - Set all `Chroma` connected devices to a single `RGB` color.
+
+* `Lerp All Frames Between Two Colors with Frame RGB Data as Input` - Use grayscale input from the existing animation to transition between two colors.
+
+* `Lerp All Frames Between Two Colors with Frame RGB Data as Input (Ignore Blank RGB Values)` - Same as above, except ignore unset colors.
+
+* `Fill All Frames with Color where RGB is Blank` - Set all colors to a single `RGB` color where the existing color is not set.
+
+* `Offset All Frames with RGB Offset` - Add `RGB` values to the existing animation colors.
+
+**Animations**
+
+* `Get Animation` - Load a `Chroma` animation into memory.
+
+* `Play Animation` - Play a `Chroma` animation. If an existing animation was playing on the device, it will be stopped to play the new animation.
+
+* `Stop Animation` - Stop playing a `Chroma` animation if it was playing.
+
+* `Play Composite` - Play a set of `Chroma` animations. The device set includes ChromaLink, Headset, Keyboard, Keypad, Mouse, and Mousepad.
+
+* `Close Animation` - Close a `Chroma` animation. This is useful to reload an animation from disk. This is used for dynamic animations to reset after color changes are made.
+
+**Timing**
+
+* `Duplicate First Frame` - Duplicate the first frame of an animation for a number of times.
+
+* `Duplicate Frames` - Duplicate all the frames of the animation. This will slow the speed of an animation by doubling the frames.
+
+* `Make Blank Frames` - Set the number of frames in the animation to a specific `RGB` color
+
+* `Reduce Frames` - Remove every nth frame of the animation. This expects integers greater or equal to 2.
+
+* `Insert Delay` - Insert a pause in the animation at the given index for a number of frames.
+
+* `Trim Start Frames` - Delete frames until the specified frame index.
+
+* `Trim End Frames` - Delete frames after the specified frame index.
+
+**Layers**
+
+* `Copy All Frames with Source Non-Blank RGB to Target` - Copy animation colors from one animation to another.
+
+* `Copy All Frames with Source Non-Blank RGB to Target Non-Blank RGB` - Same as above, except only copy over existing set colors.
 
 ### Building Chroma SDK Extension from Source
 
