@@ -46,15 +46,11 @@
 
 The Chroma SDK Extension provides a `ChromaSDK` object with `actions`, `conditions`, and `expressions` available for visual scripting. The extension also makes the API available to `Lua` scripting.
 
-* [HelloFusion](HelloFusion)
+* Sample: [HelloFusion](HelloFusion)
 
-The `HelloFusion` project is a `ClickTeam Fusion 2.5 Standard` sample app that shows the animations from the [Chroma Animation Guide](http://chroma.razer.com/ChromaGuide/).
+* The `HelloFusion` project is a `ClickTeam Fusion 2.5 Standard` sample app that shows the animations from the [Chroma Animation Guide](http://chroma.razer.com/ChromaGuide/).
 
-**Screenshot:**
-
-The sample has visual scripted sample effects and numerous buttons with behaviors that play effects defined by the `Lua` [SampleScript.lua](HelloFusion/Sample.lua).
-
-![image_6](images/image_6.png)
+* The sample has visual scripted sample effects and numerous buttons with behaviors that play effects defined by the `Lua` [SampleScript.lua](HelloFusion/Sample.lua).
 
 * Buttons pass their object name to lua via the `Lua Load String` action.
 
@@ -63,6 +59,10 @@ The sample has visual scripted sample effects and numerous buttons with behavior
 ```
 
 * The first button is cloned to a 10x5 grid which also clones the behaviors. The button text is set dynamically with the object name.
+
+**Screenshot:**
+
+![image_6](images/image_6.png)
 
 ### Quick Start
 
