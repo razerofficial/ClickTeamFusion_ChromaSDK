@@ -64,6 +64,12 @@ The Chroma SDK Extension provides a `ChromaSDK` object with `actions`, `conditio
 
 ![image_6](images/image_6.png)
 
+**Video:**
+
+**ClickTeam Fusion - Chroma SDK Extension**
+
+<a target="_blank" href="https://www.youtube.com/watch?v=PMge5EWzxDM">![video](https://img.youtube.com/vi/PMge5EWzxDM/0.jpg)</a>
+
 ### Quick Start
 
 * Copy [ChromaSDK.mfx](https://github.com/RazerOfficial/ClickTeamFusion_ChromaSDK/releases) to ```C:\Program Files (x86)\Clickteam Fusion 2.5\Extensions\Unicode```
