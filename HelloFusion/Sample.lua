@@ -3893,6 +3893,93 @@ function ShowEffect43Keypad()
 	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 end
+function ShowEffect44()
+	baseLayer = "Animations/Spiral_Keyboard.chroma"
+	layer2 = "Animations/Rainbow_Keyboard.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.CloseAnimationName(layer2)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	ChromaAnimationAPI.GetAnimation(layer2)
+	color1 = ChromaAnimationAPI.GetRGB(32, 32, 32)
+	color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	if true then
+		keys = {
+			Keyboard.RZKEY.RZKEY_W,
+			Keyboard.RZKEY.RZKEY_A,
+			Keyboard.RZKEY.RZKEY_S,
+			Keyboard.RZKEY.RZKEY_D,
+			Keyboard.RZKEY.RZKEY_P,
+			Keyboard.RZKEY.RZKEY_M,
+			Keyboard.RZKEY.RZKEY_F1
+		}
+		ChromaAnimationAPI.CopyKeysColorAllFramesName(layer2, baseLayer, keys, #keys)
+	end
+	ChromaAnimationAPI.SetChromaCustomFlagName(baseLayer, true)
+	ChromaAnimationAPI.SetChromaCustomColorAllFramesName(baseLayer)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect44ChromaLink()
+	 baseLayer = "Animations/BlackAndWhiteRainbow_ChromaLink.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
+	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
+	color1 = ChromaAnimationAPI.GetRGB(32, 32, 32)
+	color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect44Headset()
+	 baseLayer = "Animations/BlackAndWhiteRainbow_Headset.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
+	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
+	color1 = ChromaAnimationAPI.GetRGB(32, 32, 32)
+	color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect44Mousepad()
+	 baseLayer = "Animations/BlackAndWhiteRainbow_Mousepad.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
+	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
+	color1 = ChromaAnimationAPI.GetRGB(32, 32, 32)
+	color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect44Mouse()
+	 baseLayer = "Animations/BlackAndWhiteRainbow_Mouse.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
+	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
+	color1 = ChromaAnimationAPI.GetRGB(32, 32, 32)
+	color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect44Keypad()
+	 baseLayer = "Animations/BlackAndWhiteRainbow_Keypad.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
+	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
+	color1 = ChromaAnimationAPI.GetRGB(32, 32, 32)
+	color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
 
 function ExecuteEffect(buttonName)
 	if buttonName == "Button 1" then
