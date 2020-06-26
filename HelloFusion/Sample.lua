@@ -3816,7 +3816,8 @@ function ShowEffect43()
 	color2 = ChromaAnimationAPI.GetRGB(64, 0, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
 	if true then
-		keys = {
+		keys =
+		{
 			Keyboard.RZKEY.RZKEY_W,
 			Keyboard.RZKEY.RZKEY_A,
 			Keyboard.RZKEY.RZKEY_S,
@@ -3826,7 +3827,7 @@ function ShowEffect43()
 			Keyboard.RZKEY.RZKEY_F1
 		}
 		color = ChromaAnimationAPI.GetRGB(0, 255, 0)
-		ChromaAnimationAPI.SetKeysColorAllFramesName(baseLayer,  keys, #keys,  color)
+		ChromaAnimationAPI.SetKeysColorAllFramesName(baseLayer,  keys, #keys + 1,  color)
 	end
 	ChromaAnimationAPI.SetChromaCustomFlagName(baseLayer, true)
 	ChromaAnimationAPI.SetChromaCustomColorAllFramesName(baseLayer)
@@ -3904,7 +3905,8 @@ function ShowEffect44()
 	color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
 	if true then
-		keys = {
+		keys =
+		{
 			Keyboard.RZKEY.RZKEY_W,
 			Keyboard.RZKEY.RZKEY_A,
 			Keyboard.RZKEY.RZKEY_S,
@@ -3913,7 +3915,7 @@ function ShowEffect44()
 			Keyboard.RZKEY.RZKEY_M,
 			Keyboard.RZKEY.RZKEY_F1
 		}
-		ChromaAnimationAPI.CopyKeysColorAllFramesName(layer2, baseLayer, keys, #keys)
+		ChromaAnimationAPI.CopyKeysColorAllFramesName(layer2, baseLayer, keys, #keys + 1)
 	end
 	ChromaAnimationAPI.SetChromaCustomFlagName(baseLayer, true)
 	ChromaAnimationAPI.SetChromaCustomColorAllFramesName(baseLayer)
@@ -3976,6 +3978,246 @@ function ShowEffect44Keypad()
 	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
 	color1 = ChromaAnimationAPI.GetRGB(32, 32, 32)
 	color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect45()
+	baseLayer = "Animations/Blank_Keyboard.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	frameCount = 120
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 64, 64, 64)
+	if true then
+		keys =
+		{
+			Keyboard.RZKEY.RZKEY_W,
+			Keyboard.RZKEY.RZKEY_A,
+			Keyboard.RZKEY.RZKEY_S,
+			Keyboard.RZKEY.RZKEY_D
+		}
+		ChromaAnimationAPI.SetKeysColorAllFramesRGBName(baseLayer,  keys, #keys + 1,  255,  255,  0)
+	end
+	if true then
+		keys =
+		{
+			Keyboard.RZKEY.RZKEY_F1,
+			Keyboard.RZKEY.RZKEY_F2,
+			Keyboard.RZKEY.RZKEY_F3,
+			Keyboard.RZKEY.RZKEY_F4,
+			Keyboard.RZKEY.RZKEY_F5,
+			Keyboard.RZKEY.RZKEY_F6
+		}
+		t = 0
+		speed = 0.05
+		for frameId=0,frameCount,1 do
+			DebugPrint("Setting Frame=" .. tostring(frameId))
+			t = t + speed
+			hp = math.abs(math.cos(math.pi / 2.0 + t))
+			for i=0,(#keys-1),1 do
+				DebugPrint("Setting Key=" .. tostring(i))
+				ratio = (i + 1) / #keys
+				color = ChromaAnimationAPI.GetRGB(0, 255 * (1 - hp), 0)
+				if ((i + 1) / (#keys + 1) < hp) then
+					color = ChromaAnimationAPI.GetRGB(0, 255, 0)
+				else
+					color = ChromaAnimationAPI.GetRGB(0, 100, 0)
+				end
+				key = keys[i+1] -- array indexes are one based
+				ChromaAnimationAPI.SetKeyColorName(baseLayer, frameId, key, color)
+			end
+		end
+	end
+	ChromaAnimationAPI.SetChromaCustomFlagName(baseLayer, true)
+	ChromaAnimationAPI.SetChromaCustomColorAllFramesName(baseLayer)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect45ChromaLink()
+	 baseLayer = "Animations/Blank_ChromaLink.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	frameCount = 50
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
+	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
+	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
+	color1 = ChromaAnimationAPI.GetRGB(0, 64, 0)
+	color2 = ChromaAnimationAPI.GetRGB(0, 255, 0)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect45Headset()
+	 baseLayer = "Animations/Blank_Headset.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	frameCount = 50
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
+	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
+	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
+	color1 = ChromaAnimationAPI.GetRGB(0, 64, 0)
+	color2 = ChromaAnimationAPI.GetRGB(0, 255, 0)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect45Mousepad()
+	 baseLayer = "Animations/Blank_Mousepad.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	frameCount = 50
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
+	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
+	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
+	color1 = ChromaAnimationAPI.GetRGB(0, 64, 0)
+	color2 = ChromaAnimationAPI.GetRGB(0, 255, 0)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect45Mouse()
+	 baseLayer = "Animations/Blank_Mouse.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	frameCount = 50
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
+	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
+	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
+	color1 = ChromaAnimationAPI.GetRGB(0, 64, 0)
+	color2 = ChromaAnimationAPI.GetRGB(0, 255, 0)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect45Keypad()
+	 baseLayer = "Animations/Blank_Keypad.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	frameCount = 50
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
+	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
+	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
+	color1 = ChromaAnimationAPI.GetRGB(0, 64, 0)
+	color2 = ChromaAnimationAPI.GetRGB(0, 255, 0)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect46()
+	 baseLayer = "Animations/Blank_Keyboard.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	frameCount = 120
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 64, 64, 64)
+	if true then
+		keys =
+		{
+			Keyboard.RZKEY.RZKEY_W,
+			Keyboard.RZKEY.RZKEY_A,
+			Keyboard.RZKEY.RZKEY_S,
+			Keyboard.RZKEY.RZKEY_D
+		}
+		ChromaAnimationAPI.SetKeysColorAllFramesRGBName(baseLayer,  keys, #keys + 1,  255,  0,  0)
+	end
+	if true then
+		keys =
+		{
+			Keyboard.RZKEY.RZKEY_F7,
+			Keyboard.RZKEY.RZKEY_F8,
+			Keyboard.RZKEY.RZKEY_F9,
+			Keyboard.RZKEY.RZKEY_F10,
+			Keyboard.RZKEY.RZKEY_F11,
+			Keyboard.RZKEY.RZKEY_F12,
+		}
+		t = 0
+		speed = 0.05
+		for frameId=0,frameCount,1 do
+			t = t + speed
+			hp = math.abs(math.cos(math.pi / 2.0 + t))
+			for i=0,#keys-1,1 do
+				ratio = (i + 1) / #keys
+				color = ChromaAnimationAPI.GetRGB(255 * (1 - hp), 255 * (1 - hp), 0)
+				if ((i + 1) / (#keys + 1) < hp) then
+					color = ChromaAnimationAPI.GetRGB(255, 255, 0)
+				else
+					color = ChromaAnimationAPI.GetRGB(100, 100, 0)
+				end
+				key = keys[i + 1] -- lua is one based
+				ChromaAnimationAPI.SetKeyColorName(baseLayer, frameId, key, color)
+			end
+		end
+	end
+	ChromaAnimationAPI.SetChromaCustomFlagName(baseLayer, true)
+	ChromaAnimationAPI.SetChromaCustomColorAllFramesName(baseLayer)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect46ChromaLink()
+	 baseLayer = "Animations/Blank_ChromaLink.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	frameCount = 50
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
+	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
+	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
+	color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
+	color2 = ChromaAnimationAPI.GetRGB(255, 255, 0)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect46Headset()
+	 baseLayer = "Animations/Blank_Headset.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	frameCount = 50
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
+	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
+	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
+	color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
+	color2 = ChromaAnimationAPI.GetRGB(255, 255, 0)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect46Mousepad()
+	 baseLayer = "Animations/Blank_Mousepad.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	frameCount = 50
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
+	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
+	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
+	color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
+	color2 = ChromaAnimationAPI.GetRGB(255, 255, 0)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect46Mouse()
+	 baseLayer = "Animations/Blank_Mouse.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	frameCount = 50
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
+	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
+	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
+	color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
+	color2 = ChromaAnimationAPI.GetRGB(255, 255, 0)
+	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
+	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
+end
+function ShowEffect46Keypad()
+	 baseLayer = "Animations/Blank_Keypad.chroma"
+	ChromaAnimationAPI.CloseAnimationName(baseLayer)
+	ChromaAnimationAPI.GetAnimation(baseLayer)
+	frameCount = 50
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
+	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
+	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
+	color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
+	color2 = ChromaAnimationAPI.GetRGB(255, 255, 0)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
 	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
