@@ -137,6 +137,8 @@ The Chroma SDK Extension provides a `ChromaSDK` object with `actions`, `conditio
 
 * `Offset All Frames with RGB Offset` - Add `RGB` values to the existing animation colors.
 
+* `Set Frame Color Data by Index` - Set individual colors by frame and index. Use the expression `Get Frame Count` to the total number of frames. Frame index is zero based. Use the expression `Get Color Data Size` to get the total number of color indexes. Color index is zero based.
+
 **Animations**
 
 * `Get Animation` - Load a `Chroma` animation into memory.
@@ -146,6 +148,10 @@ The Chroma SDK Extension provides a `ChromaSDK` object with `actions`, `conditio
 * `Stop Animation` - Stop playing a `Chroma` animation if it was playing.
 
 * `Play Composite` - Play a set of `Chroma` animations. The device set includes ChromaLink, Headset, Keyboard, Keypad, Mouse, and Mousepad.
+
+* `Load Animation` - Load `Chroma` effects in memory for playback. This is called automatically by `Play Animation` and `Play Composite`.
+
+* `Unload Animation` - Unload the `Chroma` effects from memory. Call this after an animation has played if color changes are made.
 
 * `Close Animation` - Close a `Chroma` animation. This is useful to reload an animation from disk. This is used for dynamic animations to reset after color changes are made.
 
@@ -170,6 +176,10 @@ The Chroma SDK Extension provides a `ChromaSDK` object with `actions`, `conditio
 * `Copy All Frames with Source Non-Blank RGB to Target` - Copy animation colors from one animation to another.
 
 * `Copy All Frames with Source Non-Blank RGB to Target Non-Blank RGB` - Same as above, except only copy over existing set colors.
+
+* `Copy Source Animation as Target Animation` - Clone the source animation with the name of the target animation. If the target animation already exists, it will be closed.
+
+* `Append Target Animation to Source Animation` - Append all frames from the source animation at the end of the target animation.
 
 ### Building Chroma SDK Extension from Source
 
