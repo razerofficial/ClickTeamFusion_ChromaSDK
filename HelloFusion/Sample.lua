@@ -3827,7 +3827,7 @@ function ShowEffect43()
 			Keyboard.RZKEY.RZKEY_F1
 		}
 		color = ChromaAnimationAPI.GetRGB(0, 255, 0)
-		ChromaAnimationAPI.SetKeysColorAllFramesName(baseLayer,  keys, #keys + 1,  color)
+		ChromaAnimationAPI.SetKeysColorAllFramesName(baseLayer,  keys, #keys,  color)
 	end
 	ChromaAnimationAPI.SetChromaCustomFlagName(baseLayer, true)
 	ChromaAnimationAPI.SetChromaCustomColorAllFramesName(baseLayer)
@@ -3915,7 +3915,7 @@ function ShowEffect44()
 			Keyboard.RZKEY.RZKEY_M,
 			Keyboard.RZKEY.RZKEY_F1
 		}
-		ChromaAnimationAPI.CopyKeysColorAllFramesName(layer2, baseLayer, keys, #keys + 1)
+		ChromaAnimationAPI.CopyKeysColorAllFramesName(layer2, baseLayer, keys, #keys)
 	end
 	ChromaAnimationAPI.SetChromaCustomFlagName(baseLayer, true)
 	ChromaAnimationAPI.SetChromaCustomColorAllFramesName(baseLayer)
@@ -3996,7 +3996,7 @@ function ShowEffect45()
 			Keyboard.RZKEY.RZKEY_S,
 			Keyboard.RZKEY.RZKEY_D
 		}
-		ChromaAnimationAPI.SetKeysColorAllFramesRGBName(baseLayer,  keys, #keys + 1,  255,  255,  0)
+		ChromaAnimationAPI.SetKeysColorAllFramesRGBName(baseLayer,  keys, #keys,  255,  255,  0)
 	end
 	if true then
 		keys =
@@ -4015,7 +4015,6 @@ function ShowEffect45()
 			t = t + speed
 			hp = math.abs(math.cos(math.pi / 2.0 + t))
 			for i=0,(#keys-1),1 do
-				DebugPrint("Setting Key=" .. tostring(i))
 				ratio = (i + 1) / #keys
 				color = ChromaAnimationAPI.GetRGB(0, 255 * (1 - hp), 0)
 				if ((i + 1) / (#keys + 1) < hp) then
@@ -4117,7 +4116,7 @@ function ShowEffect46()
 			Keyboard.RZKEY.RZKEY_S,
 			Keyboard.RZKEY.RZKEY_D
 		}
-		ChromaAnimationAPI.SetKeysColorAllFramesRGBName(baseLayer,  keys, #keys + 1,  255,  0,  0)
+		ChromaAnimationAPI.SetKeysColorAllFramesRGBName(baseLayer,  keys, #keys,  255,  0,  0)
 	end
 	if true then
 		keys =
