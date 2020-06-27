@@ -9,6 +9,7 @@
 * [Quick Start](#quick-start)
 * [Project Setup](#project-setup)
 * [Actions](#actions)
+* [Expressions](#expressions)
 * [Building the Chroma SDK Extension from Source](#building-the-chroma-sdk-extension-from-source)
 
 <a name="see-also"></a>
@@ -180,6 +181,26 @@ The Chroma SDK Extension provides a `ChromaSDK` object with `actions`, `conditio
 * `Copy Source Animation as Target Animation` - Clone the source animation with the name of the target animation. If the target animation already exists, it will be closed.
 
 * `Append Target Animation to Source Animation` - Append all frames from the source animation at the end of the target animation.
+
+### Expressions
+
+* `Is Extension Initialized` - Checks if the user's system supports the Chroma SDK.
+
+* `Initialize Extension` - Initializes the `ChromaSDK` and returns true upon success.
+
+* `Get RGB` - Returns the integer value from red, green, and blue parameters.
+
+* `Get Integer Device Type` - Accepts strings for "ChromaLink", "Headset", "Keyboard", "Keypad", "Mouse", and "Mousepad" to return the integer `device type`.
+
+* `Get Integer Device` - Accepts strings for "ChromaLink", "Headset", "Keyboard", "Keypad", "Mouse", and "Mousepad" to return the integer `device`.
+
+* `Get Frame Count` - Returns the number of frames for the given animation.
+
+* `Get Color Data Size` - Returns the array size for the `device` for user with the `Set Frame Color Data by Index` action.
+
+* `Keyboard_RZKEY_*` - The expression returns the array index for the given `RZKEY`. This is used to display hotkeys in animations.
+
+![image_10](images/image_10.png)
 
 ### Building Chroma SDK Extension from Source
 
