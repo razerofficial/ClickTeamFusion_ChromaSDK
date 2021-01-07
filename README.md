@@ -23,8 +23,6 @@
 
 - [ChromaClientForDiscord](https://github.com/tgraupmann/ChromaDiscordApp) - Add Chroma lighting to the Discord App events
 
-- [ChromaClientForMixer](https://github.com/tgraupmann/ChromaClientForMixer) - Add Chroma lighting to the Mixer streaming experience
-
 - [ChromaClientForTwitch](https://github.com/tgraupmann/ChromaTwitchExtension) - Add Chroma lighting to the Twitch streaming experience
 
 **Plugins:**
@@ -73,6 +71,14 @@ The Chroma SDK Extension provides a `ChromaSDK` object with `actions`, `conditio
 <a target="_blank" href="https://www.youtube.com/watch?v=PMge5EWzxDM">![video](https://img.youtube.com/vi/PMge5EWzxDM/0.jpg)</a>
 
 ### Quick Start
+
+* Install [Synapse](https://www.razer.com/synapse-3)
+
+* Make sure the Chroma Connect module is installed.
+
+![image_11](images/image_11.png)
+
+* If you don't have Chroma hardware, you can see Chroma effects with the [Chroma Emulator](https://github.com/razerofficial/ChromaEmulator)
 
 * Copy [ChromaSDK.mfx](https://github.com/RazerOfficial/ClickTeamFusion_ChromaSDK/releases) to ```C:\Program Files (x86)\Clickteam Fusion 2.5\Extensions\Unicode```
 
